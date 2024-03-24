@@ -10,13 +10,11 @@ resource "aws_instance" "RHEL" {
   tags = {
     Name = "RHEL"
   }
-}
-
-resource "aws_instance" "Ubuntuuu" {
+resource "aws_instance" "Ubuntu1" {
   count         = 1
   ami           = "ami-080e1f13689e07408"
   instance_type = "t2.medium"
-  key_name      = "AminKeypair"
+  key_name      = "AdminKeypair"
   tags = {
     Name = "Ubuntu"
   }
