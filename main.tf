@@ -1,3 +1,17 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+
+provider "aws" {
+  region  = "us-west-1"
+}
 resource "aws_instance" "RHEL" {
   count         = 1
   ami           = "ami-0fe630eb857a6ec83"
