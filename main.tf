@@ -21,7 +21,7 @@ resource "aws_instance" "Ubuntu1" {
   }
 }
 # new change
-resource "aws_instance" "Ubuntu100" {
+resource "aws_instance" "Ubuntu1000" {
   count         = 1
   ami           = "ami-080e1f13689e07408"
   instance_type = "t2.medium"
