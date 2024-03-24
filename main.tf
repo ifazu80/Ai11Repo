@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_instance" "RHEL" {
+resource "aws_instance" "RHEL1" {
   count         = 1
   ami           = "ami-0fe630eb857a6ec83"
   instance_type = "t2.medium"
@@ -11,12 +11,21 @@ resource "aws_instance" "RHEL" {
     Name = "RHEL"
   }
 }
-
-resource "aws_instance" "Ubuntu" {
+resource "aws_instance" "Ubuntu1" {
   count         = 1
   ami           = "ami-080e1f13689e07408"
   instance_type = "t2.medium"
-  key_name      = "AminKeypair"
+  key_name      = "AdminKeypair"
+  tags = {
+    Name = "Ubuntu"
+  }
+}
+# new change
+resource "aws_instance" "Ubuntu100" {
+  count         = 1
+  ami           = "ami-080e1f13689e07408"
+  instance_type = "t2.medium"
+  key_name      = "AdminKeypair"
   tags = {
     Name = "Ubuntu"
   }
