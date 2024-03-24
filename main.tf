@@ -1,10 +1,7 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
 provider "aws" {
   region  = "us-west-1"
 }
+
 resource "aws_instance" "RHEL" {
   count         = 1
   ami           = "ami-0fe630eb857a6ec83"
