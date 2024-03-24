@@ -12,7 +12,7 @@ resource "aws_instance" "RHEL" {
   }
 }
 
-resource "aws_instance" "Ubuntu" {
+resource "aws_instance" "Ubuntuuu" {
   count         = 1
   ami           = "ami-080e1f13689e07408"
   instance_type = "t2.medium"
