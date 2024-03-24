@@ -1,15 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.42.0"
-    }
-  }
-}
-
-provider "aws" {
-  # Configuration options
-}
 resource "aws_instance" "RHEL" {
   count         = 1
   ami           = "ami-0fe630eb857a6ec83"
