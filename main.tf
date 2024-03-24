@@ -20,8 +20,7 @@ resource "aws_instance" "Ubuntu1" {
     Name = "Ubuntu"
   }
 }
-# new change
-resource "aws_instance" "Ubuntu1000" {
+resource "aws_instance" "Ubuntu2" {
   count         = 1
   ami           = "ami-080e1f13689e07408"
   instance_type = "t2.medium"
